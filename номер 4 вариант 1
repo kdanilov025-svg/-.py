@@ -1,0 +1,22 @@
+#1 
+
+num = int(input("Введите целое число"))
+if num < 0:
+    num = -num
+elif num == 0:
+    num = 1
+print(num)
+
+#2
+text = input("Введите строку: ")
+print("." in text or "," in text)
+
+#3
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+if a % 3 == 0 and b % 3 == 0 : 
+    print(True)
+elif a % 3 == 0 or b % 3 == 0:
+    print("Одно из числет кратно трём")
+else: 
+    print(False)
