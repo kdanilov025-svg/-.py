@@ -1,0 +1,30 @@
+# Задание 1
+num = int(input("Введите число: "))
+if num <= 0:
+    num = 1
+print(f"{num-1} {num} {num+1}")
+
+# Задание 2
+filename = input("Введите имя файла с расширением: ")
+extension = filename.split('.')[-1].lower()
+
+if extension == 'doc':
+    print("Word file")
+elif extension == 'py':
+    print("Python file")
+elif extension == 'txt':
+    print("Text file")
+else:
+    print("Неизвестное расширение")
+
+# Задание 3
+a = float(input("Введите первую сторону треугольника: "))
+b = float(input("Введите вторую сторону треугольника: "))
+c = float(input("Введите третью сторону треугольника: "))
+
+if a == b == c:
+    print("Равносторонний треугольник")
+elif a == b or a == c or b == c:
+    print("Равнобедренный треугольник")
+else:
+    print("Разносторонний треугольник")
