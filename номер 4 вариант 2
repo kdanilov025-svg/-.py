@@ -1,0 +1,29 @@
+# Задание 1
+num = int(input("Введите число: "))
+if num > 100:
+    print('*')
+elif num >= 0:
+    print('*' * num)
+
+# Задание 2
+str1 = input("Введите первую строку: ")
+str2 = input("Введите вторую строку: ")
+print(str1 == str2)
+
+# Задание 3
+r = int(input("Введите значение r: "))
+g = int(input("Введите значение g: "))
+b = int(input("Введите значение b: "))
+
+if r == 0 and g == 0 and b == 0:
+    print("Чёрный цвет")
+elif r == 255 and g == 255 and b == 255:
+    print("Белый цвет")
+elif r == 255 and g == 0 and b == 0:
+    print("Красный цвет")
+elif g == 255 and r == 0 and b == 0:
+    print("Зелёный цвет")
+elif b == 255 and r == 0 and g == 0:
+    print("Синий цвет")
+else:
+    print("Нет цвета")
