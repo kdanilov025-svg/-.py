@@ -83,7 +83,7 @@ print("Исходная матрица:")
 for row in matrix:
     print(row)
 
-#Задание 5
+#Задание 
 for row_idx, row in enumerate(matrix):
     for col_idx, element in enumerate(row):
         if isinstance(element, str):
@@ -97,7 +97,30 @@ for row in matrix:
 total_sum = sum(sum(row) for row in matrix)
 print(f"\nСумма всех элементов матрицы: {total_sum}")
 
+matrix = [
+    [-446, 281, -80],
+    [465, 432, -122],
+    [13, 'error', 8]
+]
 
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+
+for row_idx, row in enumerate(matrix):
+    for col_idx, element in enumerate(row):
+        if isinstance(element, str):
+            print(f"Найден строковый элемент '{element}' на позиции [{row_idx}][{col_idx}]")
+            matrix[row_idx][col_idx] = len(element)
+
+print("\nИсправленная матрица:")
+for row in matrix:
+    print(row)
+
+total_sum = sum(sum(row) for row in matrix)
+print(f"\nСумма всех элементов матрицы: {total_sum}")
+# 5
 matrix = [
     [1, 2, 3],
     [4, 5, 6],
