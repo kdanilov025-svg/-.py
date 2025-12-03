@@ -72,3 +72,27 @@ max_number = max(decimal_numbers)
 min_number = min(decimal_numbers)
 print(f"\nМаксимальное число: {max_number}")
 print(f"Минимальное число: {min_number}")
+#Задание 4
+matrix = [
+    [-446, 281, -80],
+    [465, 432, -122],
+    [13, 'error', 8]
+]
+
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+
+for row_idx, row in enumerate(matrix):
+    for col_idx, element in enumerate(row):
+        if isinstance(element, str):
+            print(f"Найден строковый элемент '{element}' на позиции [{row_idx}][{col_idx}]")
+            matrix[row_idx][col_idx] = len(element)
+
+print("\nИсправленная матрица:")
+for row in matrix:
+    print(row)
+
+total_sum = sum(sum(row) for row in matrix)
+print(f"\nСумма всех элементов матрицы: {total_sum}")
