@@ -1,1 +1,42 @@
+# 1
+my_dict = {1:'0101101', 2:'101110', 3:'1A14C', 4:'1100100', 5:'101010'}
+print("1. Исходный словарь:")
+print(my_dict)
+print("\n2. Словарь после удаления ключа 3 (шестнадцатеричное значение '1A14C'):")
+my_dict.pop(3, None)
+print(my_dict)
+print("\n3. Словарь после добавления ключа 10 со значением '0100101':")
+my_dict[10] = '0100101'
+print(my_dict)
+# 2
 
+s1 = {'</>':13, 'script':1, '__init__':10, 'self':5, 'number_9':6, '#comment':100}
+print("1. Исходный словарь:")
+print(s1)
+print("\n2. Добавление нового элемента:")
+key = input(">>> key: ")
+value = input(">>> value: ")
+s1[key] = value
+print("\n3. Обновленный словарь:")
+print(s1)
+
+# 3
+my_dict = {}
+while len(my_dict) < 3:
+    print(f"Текущий словарь: {my_dict}")
+    print(f"Нужно добавить еще {3 - len(my_dict)} элемента(ов)")
+    while True:
+        try:
+            key = int(input("Введите ключ (число): "))
+            break
+        except ValueError:
+            print("Ошибка! Ключ должен быть числом. Попробуйте снова.")
+    value = input("Введите значение: ")
+    my_dict[key] = value
+print("\nФинальный словарь с тремя элементами:")
+print(my_dict)
+# 4
+all_d = {1:15, 4:80, 44:0, 256:15, 100:70, 101:70, 20:44, 3:9}
+del_key = [1, 101, 3]
+for i in del_key: all_d.pop(i)
+print (all_d)
